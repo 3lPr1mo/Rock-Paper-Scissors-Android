@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+    <!--android:gravity="center_horizontal|center_vertical">
+    android:background="@color/white"
+    android:orientation="vertical"-->
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="0dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear2"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/titleGame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/choose_wisely"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="55sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/linear3"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/btnScissor"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/scissors"
+            android:background="@drawable/button_pressed"
+            android:scaleType="centerInside"
+            />
+
+        <ImageButton
+            android:id="@+id/btnRock"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/rock"
+            android:background="@drawable/button_pressed"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
+
+        <ImageButton
+            android:id="@+id/btnPaper"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/paper"
+            android:scaleType="centerInside"
+            android:background="@drawable/button_pressed"
+            android:adjustViewBounds="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="X"
+            android:background="@drawable/circle_button"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:layout_marginBottom="140dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
